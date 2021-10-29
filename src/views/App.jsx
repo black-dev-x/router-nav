@@ -1,12 +1,15 @@
 import React from 'react'
 import Menu from '../components/layout/Menu'
 import Content from '../components/layout/Content'
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 
 const App = () => (
   <div className='App'>
-    <Menu />
-    <Content />
+    <Router>
+      <Menu />
+      <Content />
+    </Router>
   </div>
 )
 
