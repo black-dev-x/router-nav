@@ -4,6 +4,7 @@ import Home from '../../views/Home'
 import About from '../../views/About'
 import { Route, Switch } from 'react-router'
 import Params from '../../views/examples/Params'
+import NotFound from '../../views/examples/NotFound'
 const Content = () => (
   <div className='Content'>
     <Switch>
@@ -13,8 +14,11 @@ const Content = () => (
       <Route path='/params/:id'>
         <Params />
       </Route>
-      <Route path='/'>
+      <Route exact path='/'>
         <Home />
+      </Route>
+      <Route path='*'>
+        <NotFound />
       </Route>
     </Switch>
   </div>
